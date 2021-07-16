@@ -1,6 +1,6 @@
 {
-  "name": "softwarepunt/psinfoodservice-api-client",
-  "description": "Unofficial PHP API Client for PS in foodservice Web API (PS-API)",
+  "name": "softwarepunt/php-delegate-b2b-dgxml",
+  "description": "PHP Library for working with Delegate Group B2B XML files (DGXML)",
   "type": "library",
   "license": "MIT",
   "authors": [
