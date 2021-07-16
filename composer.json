@@ -1,0 +1,25 @@
+{
+  "name": "softwarepunt/psinfoodservice-api-client",
+  "description": "Unofficial PHP API Client for PS in foodservice Web API (PS-API)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roy de Jong",
+      "email": "roy@softwarepunt.nl"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "SoftwarePunt\\DGXML\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-simplexml": "*"
+  }
+}
