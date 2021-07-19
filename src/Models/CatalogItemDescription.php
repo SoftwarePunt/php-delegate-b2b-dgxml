@@ -190,4 +190,11 @@ class CatalogItemDescription extends AbstractModel
      * article in KG.
      */
     public ?float $NetWeight = null;
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function getElementName(): string
+    {
+        return "Description";
+    }
 }

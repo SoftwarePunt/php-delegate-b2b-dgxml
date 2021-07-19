@@ -4,12 +4,12 @@
 [![PHPUnit](https://github.com/SoftwarePunt/php-delegate-b2b-dgxml/actions/workflows/phpunit.yml/badge.svg)](https://github.com/SoftwarePunt/php-delegate-b2b-dgxml/actions/workflows/phpunit.yml)
 [![Version](http://poser.pugx.org/softwarepunt/php-delegate-b2b-dgxml/version)](https://packagist.org/packages/softwarepunt/psinfoodservice-api-client)
 
-Supports exporting and importing Article-/Price Catalog.
+👉 Currently only supports exporting the Article-/Price Catalog to Delegate DGXML format.
 
 ## Installation
 ### Requirements
 - PHP 7.4+
-  - with extension: simplexml
+  - with extension: dom
 - [Composer](https://getcomposer.org/)
 
 ### Setup

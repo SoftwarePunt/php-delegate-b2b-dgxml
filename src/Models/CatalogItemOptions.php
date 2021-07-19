@@ -22,4 +22,11 @@ class CatalogItemOptions extends AbstractModel
      * been negotiated and contractually fixed for a period of time.
      */
     public bool $ContractItem;
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function getElementName(): string
+    {
+        return "Options";
+    }
 }

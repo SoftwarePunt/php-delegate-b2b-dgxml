@@ -198,4 +198,11 @@ class CatalogItem extends AbstractModel
     {
         $this->setDocumentLink(3, $link);
     }
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function getElementName(): string
+    {
+        return "Item";
+    }
 }
