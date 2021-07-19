@@ -20,4 +20,33 @@ composer require softwarepunt/php-delegate-b2b-dgxml
 ```
 
 ## Usage
-WIP
+
+### Creating a catalog
+Using this library, you can build the catalog by simply assigning PHP objects and values. The structure and property names match the XML and documentation. Each property is type-hinted and contains phpdocs based on the official documentation.
+
+Create a new `ProductCatalog` and assign items to it, then export it as XML:
+
+```php
+<?php
+
+use SoftwarePunt\DGXML\Documents\ProductCatalog;
+use SoftwarePunt\DGXML\Models\Supplier;
+use SoftwarePunt\DGXML\Models\CatalogItem;
+
+require_once "vendor/autoload.php";
+
+$catalog = new ProductCatalog();
+
+$catalog->Header->Supplier = new Supplier();
+$catalog->Header->Supplier->GLN = "9389229119441";
+$catalog->Header->Supplier->Name = "Backshop";
+
+$item = new CatalogItem();
+$item->Number = 1602;
+$item->Name = "Vollkornbrot";
+$item->Price->Purchase = 1.6;
+
+$catalog->Items[] = $item;
+
+echo $catalog->toXml(); // <?xml ...
+```
