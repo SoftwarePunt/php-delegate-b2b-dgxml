@@ -24,6 +24,8 @@ composer require softwarepunt/php-delegate-b2b-dgxml
 ### Creating a catalog
 Using this library, you can build the catalog by simply assigning PHP objects and values. The structure and property names match the XML and documentation. Each property is type-hinted and contains phpdocs based on the official documentation.
 
+📕 To best understand the structure of the catalog, refer to the official documentation (`ArticleCatalog DGXML 1.0_EN`).
+
 Create a new `ProductCatalog` and assign items to it, then export it as XML:
 
 ```php
