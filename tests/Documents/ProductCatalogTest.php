@@ -9,6 +9,7 @@ use SoftwarePunt\DGXML\Models\FutureCatalogItemOptions;
 use SoftwarePunt\DGXML\Models\FuturePrice;
 use SoftwarePunt\DGXML\Models\Supplier;
 use SoftwarePunt\DGXML\Models\Values\Allergen;
+use SoftwarePunt\DGXML\Models\Values\NutrientValue;
 
 class ProductCatalogTest extends TestCase
 {
@@ -67,6 +68,21 @@ class ProductCatalogTest extends TestCase
         $allergen2->Allergen = "AW";
         $allergen2->contained = "CANCONTAIN";
         $catalogItem->Allergens[] = $allergen2;
+
+        $nutrient1 = new NutrientValue();
+        $nutrient1->code = "GCAL";
+        $nutrient1->NutrientValue = 260;
+        $catalogItem->NutrientValues[] = $nutrient1;
+
+        $nutrient2 = new NutrientValue();
+        $nutrient2->code = "ZE";
+        $nutrient2->NutrientValue = 7.5;
+        $catalogItem->NutrientValues[] = $nutrient2;
+
+        $nutrient3 = new NutrientValue();
+        $nutrient3->code = "ZK";
+        $nutrient3->NutrientValue = 50;
+        $catalogItem->NutrientValues[] = $nutrient3;
 
         $actual = $catalog->toXml();
 
@@ -127,6 +143,11 @@ class ProductCatalogTest extends TestCase
         <Allergen contained="YES">AU</Allergen>
         <Allergen contained="CANCONTAIN">AW</Allergen>
       </Allergens>
+      <NutrientValues>
+        <NutrientValue code="GCAL">260</NutrientValue>
+        <NutrientValue code="ZE">7.5</NutrientValue>
+        <NutrientValue code="ZK">50</NutrientValue>
+      </NutrientValues>
     </Item>
   </Items>
 </dgenh:PRICAT>
