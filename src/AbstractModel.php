@@ -9,7 +9,7 @@ abstract class AbstractModel
 {
     public function getElementName(): string
     {
-        return get_class($this);
+        return (new \ReflectionClass($this))->getShortName();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -67,6 +67,12 @@ abstract class AbstractModel
 
     protected function getNodeValue(string $name, $value)
     {
+        if ($value === true) {
+            return "1";
+        } else if ($value === false || $value === 0) {
+            return "0";
+        }
+
         if ($value instanceof \DateTime) {
             if (strpos(strtolower($name), "datetime")) {
                 // Assume date + time
@@ -103,7 +109,7 @@ abstract class AbstractModel
                 // Prevent reading uninitialized properties
                 $propValue = $this->$propName;
 
-            if ($propValue === null)
+            if ($propValue === null || $propValue === [])
                 // If a property is null or unassigned, assume it should not be included
                 continue;
 

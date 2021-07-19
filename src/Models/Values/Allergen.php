@@ -13,7 +13,7 @@ class Allergen extends AbstractValueModel
      * Allergen codes can be transmitted in this field. We recommend that you use the standard codes for the 14
      * allergens defined in the Food Information Ordinance.
      */
-    public ?float $Allergen = null;
+    public ?string $Allergen = null;
 
     /**
      * Allergens, of which traces may be contained in the article, must be identified with contained="CANCONTAIN" in

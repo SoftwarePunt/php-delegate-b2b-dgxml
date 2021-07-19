@@ -21,8 +21,15 @@ abstract class AbstractValueModel extends AbstractModel
         if (!$elementName)
             $elementName = $this->getElementName();
 
-        $element = new \DOMElement($elementName);
+        $element = $document->createElement($elementName, $elementName);
         $element->nodeValue = (string)$this->getValue();
+
+        foreach ($this->getFields() as $name => $value) {
+            if (!preg_match('~^\p{Lu}~u', $name)) { // Name does NOT start with a capital letter
+                $element->setAttribute($name, $value);
+            }
+        }
+
         return $element;
     }
 
