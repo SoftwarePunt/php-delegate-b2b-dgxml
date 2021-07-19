@@ -70,7 +70,7 @@ abstract class AbstractModel
         if ($value instanceof \DateTime) {
             if (strpos(strtolower($name), "datetime")) {
                 // Assume date + time
-                return $value->format('Y-m-d H:i:s');
+                return $value->format('Y-m-d\TH:i:s');
             } else {
                 // Assume date only
                 return $value->format('Y-m-d');

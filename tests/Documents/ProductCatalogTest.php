@@ -18,7 +18,7 @@ class ProductCatalogTest extends TestCase
       <Type>PRICAT</Type>
       <Version>1.0</Version>
     </Document>
-    <SendDateTime>' . $now->format('Y-m-d H:i:s') . '</SendDateTime>
+    <SendDateTime>' . $now->format('Y-m-d\TH:i:s') . '</SendDateTime>
   </Header>
   <Items/>
 </dgenh:PRICAT>
