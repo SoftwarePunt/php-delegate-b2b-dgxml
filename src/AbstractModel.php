@@ -54,7 +54,7 @@ abstract class AbstractModel
                         }
                     }
                 } else {
-                    $element->nodeValue = $this->getNodeValue($value);
+                    $element->nodeValue = $this->getNodeValue($name, $value);
                 }
             }
 
@@ -65,10 +65,17 @@ abstract class AbstractModel
         return $elements;
     }
 
-    protected function getNodeValue($value)
+    protected function getNodeValue(string $name, $value)
     {
-        if ($value instanceof \DateTime)
-            return $value->format('Y-m-d');
+        if ($value instanceof \DateTime) {
+            if (strpos(strtolower($name), "datetime")) {
+                // Assume date + time
+                return $value->format('Y-m-d H:i:s');
+            } else {
+                // Assume date only
+                return $value->format('Y-m-d');
+            }
+        }
 
         return (string)$value;
     }
