@@ -28,4 +28,11 @@ class DocumentLink extends AbstractValueModel
     {
         $this->Link = $value;
     }
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function getElementName(): string
+    {
+        return "Link";
+    }
 }
