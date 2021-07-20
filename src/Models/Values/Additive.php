@@ -31,7 +31,7 @@ class Additive extends AbstractValueModel
         return $this->Additive;
     }
 
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->Additive = $value;
     }

@@ -27,7 +27,7 @@ class Information extends AbstractValueModel
         return $this->Information;
     }
 
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->Information = $value;
     }

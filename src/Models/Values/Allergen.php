@@ -28,7 +28,7 @@ class Allergen extends AbstractValueModel
         return $this->Allergen;
     }
 
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->Allergen = $value;
     }

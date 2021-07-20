@@ -15,7 +15,7 @@ class DocumentLink extends AbstractValueModel
      * The fourth "Link" element is reserved for image files: Name of an image file which is displayed as an image
      * preview in the order module of the Delegate myMMS & Patients Service Web Client.
      */
-    public string $Link;
+    public ?string $Link = null;
 
     // -----------------------------------------------------------------------------------------------------------------
 
@@ -24,7 +24,7 @@ class DocumentLink extends AbstractValueModel
         return $this->Link;
     }
 
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->Link = $value;
     }

@@ -12,7 +12,7 @@ class NutrientValue extends AbstractValueModel
     /**
      * Nutrient per 100 Gram
      */
-    public float $NutrientValue;
+    public ?float $NutrientValue = null;
 
     /**
      * The code of the respective nutrition value (e.g. "GCAL").
@@ -26,7 +26,7 @@ class NutrientValue extends AbstractValueModel
         return $this->NutrientValue;
     }
 
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->NutrientValue = $value;
     }

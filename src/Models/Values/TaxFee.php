@@ -21,7 +21,7 @@ class TaxFee extends AbstractValueModel
         return $this->TaxFee;
     }
 
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->TaxFee = $value;
     }

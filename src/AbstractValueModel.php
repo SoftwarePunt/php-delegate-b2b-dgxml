@@ -10,8 +10,15 @@ abstract class AbstractValueModel extends AbstractModel
     // -----------------------------------------------------------------------------------------------------------------
     // Single-value API
 
+    /**
+     * @return mixed|null
+     */
     public abstract function getValue();
-    public abstract function setValue($value);
+
+    /**
+     * @param mixed|null $value
+     */
+    public abstract function setValue($value): void;
 
     // -----------------------------------------------------------------------------------------------------------------
     // Writing
