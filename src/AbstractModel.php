@@ -54,7 +54,7 @@ abstract class AbstractModel
                         }
                     }
                 } else {
-                    $element->nodeValue = $this->getNodeValue($name, $value);
+                    $element->textContent = $this->getNodeValue($name, $value);
                 }
             }
 
