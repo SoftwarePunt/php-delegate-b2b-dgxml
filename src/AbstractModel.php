@@ -67,6 +67,10 @@ abstract class AbstractModel
 
     protected function getNodeValue(string $name, $value)
     {
+        if (is_float($value)) {
+            return number_format($value, 2, '.', '');
+        }
+
         if ($value === true) {
             return "1";
         } else if ($value === false || $value === 0) {

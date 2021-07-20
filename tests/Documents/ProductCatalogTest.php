@@ -115,18 +115,18 @@ class ProductCatalogTest extends TestCase
         <MinimumShelfLifeDays>3</MinimumShelfLifeDays>
       </Description>
       <Price>
-        <Purchase>1.6</Purchase>
+        <Purchase>1.60</Purchase>
       </Price>
       <FuturePrices>
         <Price>
           <ValidFrom>2019-12-01</ValidFrom>
-          <Purchase>2</Purchase>
-          <Discount>0.1</Discount>
+          <Purchase>2.00</Purchase>
+          <Discount>0.10</Discount>
         </Price>
         <Price>
           <ValidFrom>2020-01-01</ValidFrom>
-          <Purchase>2</Purchase>
-          <Discount>0</Discount>
+          <Purchase>2.00</Purchase>
+          <Discount>0.00</Discount>
         </Price>
       </FuturePrices>
       <Options>
@@ -144,9 +144,9 @@ class ProductCatalogTest extends TestCase
         <Allergen contained="CANCONTAIN">AW</Allergen>
       </Allergens>
       <NutrientValues>
-        <NutrientValue code="GCAL">260</NutrientValue>
-        <NutrientValue code="ZE">7.5</NutrientValue>
-        <NutrientValue code="ZK">50</NutrientValue>
+        <NutrientValue code="GCAL">260.00</NutrientValue>
+        <NutrientValue code="ZE">7.50</NutrientValue>
+        <NutrientValue code="ZK">50.00</NutrientValue>
       </NutrientValues>
     </Item>
   </Items>
