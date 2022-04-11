@@ -2,7 +2,7 @@
 **PHP Library for working with Delegate Group B2B XML files (DGXML)**.
 
 [![PHPUnit](https://github.com/SoftwarePunt/php-delegate-b2b-dgxml/actions/workflows/phpunit.yml/badge.svg)](https://github.com/SoftwarePunt/php-delegate-b2b-dgxml/actions/workflows/phpunit.yml)
-[![Version](http://poser.pugx.org/softwarepunt/php-delegate-b2b-dgxml/version)](https://packagist.org/packages/softwarepunt/psinfoodservice-api-client)
+[![Version](http://poser.pugx.org/softwarepunt/php-delegate-b2b-dgxml/version)](https://packagist.org/packages/softwarepunt/php-delegate-b2b-dgxml)
 
 👉 Currently only supports exporting the Article-/Price Catalog to Delegate DGXML format.
 
