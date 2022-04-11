@@ -8,7 +8,7 @@
 
 ## Installation
 ### Requirements
-- PHP 7.4+
+- PHP 8.0+
   - with extension: dom
 - [Composer](https://getcomposer.org/)
 
