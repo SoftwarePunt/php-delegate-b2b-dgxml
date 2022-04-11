@@ -153,6 +153,14 @@ class ProductCatalogTest extends TestCase
 </dgenh:PRICAT>
 ';
 
-        $this->assertSame($expected, $actual);
+        $this->assertSame(
+            self::normalizeLineEndings($expected),
+            self::normalizeLineEndings($actual)
+        );
+    }
+
+    private static function normalizeLineEndings(string $input): string
+    {
+        return trim(str_replace("\r\n", "\n", $input));
     }
 }
