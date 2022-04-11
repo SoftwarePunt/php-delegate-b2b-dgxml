@@ -25,7 +25,7 @@ class ProductCatalogTest extends TestCase
         $catalog->Items[] = $catalogItem;
 
         $catalogItem->Number = 1602;
-        $catalogItem->Name = "Vollkornbrot";
+        $catalogItem->Name = "Fuldkornsbrød";
         $catalogItem->OrderUnit = "KG";
         $catalogItem->ContainedUnit = "KG";
         $catalogItem->QtyContainedUnit = 1;
@@ -102,7 +102,7 @@ class ProductCatalogTest extends TestCase
   <Items>
     <Item>
       <Number>1602</Number>
-      <Name>Vollkornbrot</Name>
+      <Name>Fuldkornsbrod</Name>
       <OrderUnit>KG</OrderUnit>
       <ContainedUnit>KG</ContainedUnit>
       <QtyContainedUnit>1</QtyContainedUnit>

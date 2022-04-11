@@ -9,7 +9,7 @@
 ## Installation
 ### Requirements
 - PHP 8.0+
-  - with extension: dom
+  - with extension: dom, intl
 - [Composer](https://getcomposer.org/)
 
 ### Setup
@@ -45,10 +45,13 @@ $catalog->Header->Supplier->Name = "Backshop";
 
 $item = new CatalogItem();
 $item->Number = 1602;
-$item->Name = "Vollkornbrot";
+$item->Name = "Fuldkornsbrød";
 $item->Price->Purchase = 1.6;
 
 $catalog->Items[] = $item;
 
 echo $catalog->toXml(); // <?xml ...
 ```
+
+### Notes
+- All text values are automatically transliterated to ASCII-only. This solves issues in the Delegate import process, but means special characters cannot be properly represented in the catalogs. 

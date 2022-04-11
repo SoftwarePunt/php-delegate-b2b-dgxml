@@ -2,6 +2,8 @@
 
 namespace SoftwarePunt\DGXML;
 
+use SoftwarePunt\DGXML\Utils\AsciiTransliterator;
+
 /**
  * A model that can be expressed in DGXML.
  */
@@ -54,7 +56,9 @@ abstract class AbstractModel
                         }
                     }
                 } else {
-                    $element->textContent = $this->getNodeValue($name, $value);
+                    $element->textContent = AsciiTransliterator::transliterate(
+                        $this->getNodeValue($name, $value)
+                    );
                 }
             }
 

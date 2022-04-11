@@ -2,6 +2,8 @@
 
 namespace SoftwarePunt\DGXML;
 
+use SoftwarePunt\DGXML\Utils\AsciiTransliterator;
+
 /**
  * A single-value model that can be expressed in DGXML.
  */
@@ -29,7 +31,9 @@ abstract class AbstractValueModel extends AbstractModel
             $elementName = $this->getElementName();
 
         $element = $document->createElement($elementName, $elementName);
-        $element->textContent = $this->getNodeValue($elementName, $this->getValue());
+        $element->textContent = AsciiTransliterator::transliterate(
+            $this->getNodeValue($elementName, $this->getValue())
+        );
 
         foreach ($this->getFields() as $name => $value) {
             if (!preg_match('~^\p{Lu}~u', $name)) { // Name does NOT start with a capital letter
