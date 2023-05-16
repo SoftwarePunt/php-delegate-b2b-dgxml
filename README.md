@@ -55,3 +55,4 @@ echo $catalog->toXml(); // <?xml ...
 
 ### Notes
 - All text values are automatically transliterated to ASCII-only. This solves issues in the Delegate import process, but means special characters cannot be properly represented in the catalogs. 
+- You must ensure `GTIN` / `GTINOrderUnit` item values can be parsed as a 64-bit integer, or the Delegate software will fail to import the catalog!
